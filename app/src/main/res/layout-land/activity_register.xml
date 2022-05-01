@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="users"
+            type="com.user.transportuser.model.Users" />
+        
+        <variable
+            name="handler"
+            type="com.user.transportuser.activities.RegisterActivity" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".activities.RegisterActivity">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/purple_500"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            android:text="@{users.text, default = register}"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/purple_500"
+            android:textSize="20dp"
+            android:layout_marginTop="10dp"
+            android:hint="=Email"
+            android:text="@{users.email}"/>
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/purple_500"
+            android:textSize="20dp"
+            android:layout_marginTop="10dp"
+            android:hint="Password"
+            android:text="@={users.password}"/>
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/purple_500"
+            android:textSize="20dp"
+            android:layout_marginTop="10dp"
+            android:hint="Name"
+            android:text="@={users.name}"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/purple_500"
+            android:textSize="20dp"
+            android:layout_marginTop="10dp"
+            android:hint="School"
+            android:text="@={users.school}"/>
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{()->handler.register()}"
+            android:text="Register"/>
+
+
+
+
+
+
+
+
+    </LinearLayout>
+</layout>
