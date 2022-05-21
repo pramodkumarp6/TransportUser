@@ -13,7 +13,7 @@ class SplasActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val mbinding: ActivitySplashBinding = DataBindingUtil.setContentView(this, R.layout.activity_splash);
-        mbinding.user = User("User Transpotation")
+        mbinding.user = User("Hello")
         tata()
     }
 

@@ -1,4 +1,35 @@
 package com.user.transportuser.network
 
-interface Api {
+import com.user.transportuser.model.LoginResponse
+import com.user.transportuser.model.RegisterResponse
+import com.user.transportuser.model.UserResponse
+import retrofit2.Call
+import retrofit2.Response
+import retrofit2.http.*
+
+
+interface Api{
+@FormUrlEncoded
+@POST("/simple/public/createuser")
+ fun createUser(
+    @Field("email") email: String,
+    @Field("password") password: String,
+    @Field("name") name: String,
+    @Field("school") school: String
+): Call<RegisterResponse>
+
+@FormUrlEncoded
+@POST("/simple/public/userlogin")
+ fun loginUser(
+    @Field("email") email: String,
+    @Field("password") password: String
+
+): Call<LoginResponse>
+
+
+
+@GET("/simple/public/allusers")
+@Headers("Content-type:application/json")
+fun getUser(): Response<UserResponse>
+
 }
