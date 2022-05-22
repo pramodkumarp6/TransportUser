@@ -22,20 +22,20 @@ class RegisterActivity : AppCompatActivity() {
         registerViewModel = ViewModelProvider(this).get(RegisterViewModel::class.java)
 
         setTitle("RegisterActivity")
-        registerbinding.handler=this
+        registerbinding.handler = this
         registerbinding.registerViewModel = registerViewModel
 
         //registerbinding.users = Users("Registration","p@gmail.com","pa","Pandey","Giit")
 
     }
 
-    fun register(){
-         registerViewModel.person.email="pramodkumarp6@gmail.com"
-        registerViewModel.person.password="pqwe"
-        registerViewModel.person.name="tata"
-        registerViewModel.person.school="uptu"
+    fun register() {
+        registerViewModel.person.email = "pramodkumarp6@gmail.com"
+        registerViewModel.person.password = "pqwe"
+        registerViewModel.person.name = "tata"
+        registerViewModel.person.school = "uptu"
 
-        Toast.makeText(this,"Hello",Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "Hello", Toast.LENGTH_LONG).show();
 
     }
 

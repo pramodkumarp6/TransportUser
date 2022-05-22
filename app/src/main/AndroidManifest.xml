@@ -21,6 +21,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TransportUser">
         <activity
+            android:name=".activities.UserForgetActivity"
+            android:exported="false" />
+        <activity
             android:name=".dash.MainActivity"
             android:exported="false"
             android:label="@string/title_activity_main"
