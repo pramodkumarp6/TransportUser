@@ -19,21 +19,17 @@ class HomeFragment : Fragment() {
 
     private val binding get() = _binding!!
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         val homeViewModel = ViewModelProvider(this).get(HomeViewModel::class.java)
 
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
-        val root: View = binding.root
+         val root: View = binding.root
 
 
         val user: User = SharedPrefManager.getInstance(this.requireContext()).user
-       // binding.id.setText(String.valueOf(user.id)
 
-        Log.e("Home",user.email.toString())
+
+        Log.e("Home",user.id.toString())
 
         binding.textHome.text =user.school.toString()
         /*activityProfileBinding.email.setText(user.getEmail())
@@ -41,10 +37,7 @@ class HomeFragment : Fragment() {
 
 
 
-   /*     val textView: TextView = binding.textHome
-        homeViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }*/
+
         return root
     }
 

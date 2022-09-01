@@ -1,4 +1,13 @@
 package com.user.transportuser.model
 
-class UserResponse {
-}
+import com.google.gson.annotations.SerializedName
+
+data class UserResponse (
+    @SerializedName("error")
+    var error: Boolean,
+    @SerializedName("meassage")
+    var message:String,
+    @SerializedName("users")
+    var users: List<Users>
+
+    )
