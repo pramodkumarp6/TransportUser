@@ -6,7 +6,7 @@
       <data>
           <variable
               name="user"
-              type="com.user.transportuser.User" />
+              type="com.tranport.user.User" />
       </data>
 
     <LinearLayout

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.user.transportuser">
+    package="com.tranport.user">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
@@ -21,10 +21,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TransportUser">
         <activity
-            android:name=".activities.UserForgetActivity"
+            android:name="com.tranport.user.activities.UserForgetActivity"
             android:exported="false" />
         <activity
-            android:name=".dash.MainActivity"
+            android:name="com.tranport.user.dash.MainActivity"
             android:exported="false"
             android:label="@string/title_activity_main"
             android:theme="@style/Theme.TransportUser.NoActionBar" />
@@ -44,13 +44,13 @@
             android:value="YOUR_API_KEY" />
 
         <activity
-            android:name=".activities.RegisterActivity"
+            android:name="com.tranport.user.activities.RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".activities.LoginActivity"
+            android:name="com.tranport.user.activities.LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".SplasActivity"
+            android:name="com.tranport.user.SplasActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

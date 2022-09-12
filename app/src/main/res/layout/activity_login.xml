@@ -6,7 +6,7 @@
 
         <variable
             name="loginViewModel"
-            type="com.user.transportuser.viewmodel.LoginViewModel" />
+            type="com.tranport.user.viewmodel.LoginViewModel" />
     </data>
 
 

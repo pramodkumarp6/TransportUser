@@ -6,11 +6,11 @@
     <data>
         <variable
             name="registerViewModel"
-            type="com.user.transportuser.viewmodel.RegisterViewModel" />
+            type="com.tranport.user.viewmodel.RegisterViewModel" />
         
         <variable
             name="handler"
-            type="com.user.transportuser.activities.RegisterActivity" />
+            type="com.tranport.user.activities.RegisterActivity" />
 
     </data>
 

@@ -6,11 +6,11 @@
     <data>
         <variable
             name="users"
-            type="com.user.transportuser.model.Users" />
+            type="com.tranport.user.model.Users" />
         
         <variable
             name="handler"
-            type="com.user.transportuser.activities.RegisterActivity" />
+            type="com.tranport.user.activities.RegisterActivity" />
 
     </data>
 

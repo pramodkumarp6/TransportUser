@@ -5,7 +5,7 @@
     <data>
         <variable
             name="accountViewModel"
-            type="com.user.transportuser.dash.ui.gallery.AccountViewModel" />
+            type="com.tranport.user.dash.ui.gallery.AccountViewModel" />
 
     </data>
 
