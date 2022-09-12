@@ -30,12 +30,6 @@ class RegisterActivity : AppCompatActivity() {
     }
 
     fun register() {
-        registerViewModel.person.email = "pramodkumarp6@gmail.com"
-        registerViewModel.person.password = "pqwe"
-        registerViewModel.person.name = "tata"
-        registerViewModel.person.school = "uptu"
-
-        Toast.makeText(this, "Hello", Toast.LENGTH_LONG).show();
 
     }
 

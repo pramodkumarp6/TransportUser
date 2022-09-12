@@ -7,11 +7,12 @@ import androidx.lifecycle.ViewModel
 import com.user.transportuser.model.LoginResponse
 import com.user.transportuser.model.UserResponse
 import com.user.transportuser.network.RetrofitClient
+import com.user.transportuser.repository.UserRepository
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class SlideshowViewModel : ViewModel() {
+class SlideshowViewModel(private val repository: UserRepository) : ViewModel() {
 
     private val  userDetails = MutableLiveData<UserResponse>()
 
@@ -28,23 +29,5 @@ class SlideshowViewModel : ViewModel() {
 
     fun userDetails(){
 
-        RetrofitClient.api.getUser()
-            .enqueue(object : Callback<UserResponse> {
-                override fun onResponse(
-                    call: Call<UserResponse>, response: Response<UserResponse>) {
-
-                    userDetails.value =response.body()
-                    Log.e(response.body().toString(),"response")
-
-
-
-                }
-
-                override fun onFailure(call: Call<UserResponse>, t: Throwable) {
-
-                }
-
-
-            })
-    }
+          }
 }

@@ -5,11 +5,12 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.user.transportuser.model.LoginResponse
 import com.user.transportuser.network.RetrofitClient
+import com.user.transportuser.repository.UserRepository
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class AccountViewModel : ViewModel() {
+class AccountViewModel(private val repository: UserRepository) : ViewModel() {
 
     var email = MutableLiveData<String>()
     var name = MutableLiveData<String>()

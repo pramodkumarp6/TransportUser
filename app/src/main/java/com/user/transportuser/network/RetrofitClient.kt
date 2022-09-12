@@ -1,20 +1,17 @@
 package com.user.transportuser.network
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import java.util.*
 
-class RetrofitClient {
-    companion object {
-        public const val BASE_URL = "https://big-name-interviewe.000webhostapp.com"
+object RetrofitClient {
+    fun invoke():Api {
 
-        private val retrofit = Retrofit.Builder()
-            .baseUrl(BASE_URL)
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
+           return Retrofit.Builder()
+                .baseUrl(Url.BASE_URL)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build()
+                .create(Api::class.java)
 
-        val api = retrofit.create(Api::class.java)
 
-    }
-
+        }
 }
 

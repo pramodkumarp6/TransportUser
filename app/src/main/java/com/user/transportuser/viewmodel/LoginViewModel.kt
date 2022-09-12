@@ -5,16 +5,13 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-
 import com.user.transportuser.model.LoginResponse
-import com.user.transportuser.network.RetrofitClient
-
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
+import com.user.transportuser.repository.UserRepository
+import com.user.transportuser.utils.Coroutines
+import org.json.JSONException
 
 
-class LoginViewModel : ViewModel() {
+class LoginViewModel(private val repository: UserRepository) : ViewModel() {
     var email = MutableLiveData<String>()
     var password = MutableLiveData<String>()
 
@@ -49,20 +46,16 @@ class LoginViewModel : ViewModel() {
         Log.e(email.value.toString(), "Email")
         Log.e(password.value.toString(), "password")
 
-        RetrofitClient.api.loginUser(email.value.toString(), password.value.toString())
-            .enqueue(object : Callback<LoginResponse> {
-                override fun onResponse(
-                    call: Call<LoginResponse>, response: Response<LoginResponse>
-                ) {
-                    myvalues.value = response.body()
-                }
+
+        Coroutines.main {
+            try{
+                //val userResponse = repository.loginUser(email.value,password.value)
+
+            }catch (e: JSONException){
+
+            }
+        }
 
 
-                override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
-
-
-                }
-
-            })
     }
 }

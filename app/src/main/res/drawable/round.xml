@@ -7,5 +7,4 @@
     <padding android:left="10dp"></padding>
     <padding android:bottom="10dp"></padding>
     <solid android:color="#FFF"/>
-
 </shape>
